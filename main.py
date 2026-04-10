@@ -14,3 +14,7 @@ def read_data(file_path):
 def sort_by_area(data):
     """Сортує дані за площею (від меншого до більшого)."""
     return sorted(data, key=lambda x: x['area'])
+
+def sort_by_population(data):
+    """Сортує дані за населенням (від меншого до більшого)."""
+    return sorted(data, key=lambda x: x['population'])
