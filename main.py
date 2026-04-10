@@ -20,23 +20,19 @@ def sort_by_population(data):
     return sorted(data, key=lambda x: x['population'])
 
 if __name__ == "__main__":
-    # 1. Вказуємо шлях до файлу з даними (переконайся, що data.txt є в папці)
     filename = "data.txt"
 
     try:
-        # 2. Зчитуємо дані
         print("--- Зчитування даних ---")
         countries = read_data(filename)
         for c in countries:
             print(c)
 
-        # 3. Сортуємо за площею
         print("\n--- Сортування за площею ---")
         sorted_area = sort_by_area(countries)
         for c in sorted_area:
             print(f"{c['country']}: {c['area']} км²")
 
-        # 4. Сортуємо за населенням
         print("\n--- Сортування за населенням ---")
         sorted_pop = sort_by_population(countries)
         for c in sorted_pop:
